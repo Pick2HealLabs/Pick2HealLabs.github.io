@@ -1,0 +1,64 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    {% if page.title %} {% assign pageTitle = page.title %} {% else %} {% assign
+    pageTitle = site.title %} {% endif %} {% if page.permalink != 'index.html'
+    %} {% assign pageTitle = page.title | append: ' | ' | append: site.title%}
+    {% endif %} {% if page.grouptype == 'tag' %} {% assign thistag = page.tag |
+    replace: " ", "" %} {% assign pageTitle = page.tag | append: " Articles
+    Tagged #" | append: thistag %} {% elsif page.grouptype == 'category' %} {%
+    assign thiscat = page.category | replace: " ", "" %} {% assign pageTitle =
+    page.category | append: " Articles in Category #" | append: thiscat %} {%
+    endif %} {% if page.url == '/' %} {% assign pageTitle = site.title | append:
+    " - Blood testing simplified" %} {% endif %} {% if page.layout == 'blog' %}
+    {% assign hashtag = page.tag[0] | replace: " ", "" %} {% assign pageTitle =
+    page.title | append: " #" | append: hashtag %} {% endif %}
+
+    <title>{{ pageTitle | trim }}</title>
+
+    {% if page.content %} {% assign meta = page.content | strip_html |
+    strip_newlines | strip %} {% else %} {% assign meta = site.masthead %} {%
+    endif %} {% if page.url contains '/blogs/' %} {% assign meta = "Get samples
+    collected at your home or office and get report via email " %} {% endif %}
+    {% if page.excerpt %} {% assign meta = page.excerpt | strip_html |
+    strip_newlines | strip %} {% else %} {% assign meta = page.content |
+    strip_html | strip_newlines | strip %} {% endif %} {% if page.grouptype ==
+    'tag' %} {% assign meta = page.tag | append: ", all posts under Tag " |
+    append: page.tag %} {% elsif page.grouptype == 'category' %} {% assign meta
+    = page.category | append: ", all posts under Category " | append:
+    page.category %} {% endif %} {% if page.url == "/" %} {% assign meta =
+    site.masthead | prepend: "Online blood testing service. Samples collected at
+    your home or office. " | strip %} {% endif %} {% assign cleanMeta = meta |
+    slugify | replace: "-", " " | capitalize | truncate: 160, "" %}
+
+    <meta name="description" content="{{ cleanMeta }}" />
+
+    {% include meta-og-schema.html %}
+
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Lora:400,400i,700,700i&display=swap']
+            }
+        }
+        ;(function() {
+            var wf = document.createElement('script')
+            wf.src =
+                'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js'
+            wf.type = 'text/javascript'
+            wf.async = 'true'
+            var s = document.getElementsByTagName('script')[0]
+            s.parentNode.insertBefore(wf, s)
+        })()
+    </script>
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css"
+    />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    {% include favicons.html %}
+</head>

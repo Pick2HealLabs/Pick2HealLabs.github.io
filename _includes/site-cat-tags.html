@@ -1,0 +1,16 @@
+<h3>Categories</h3>
+<div class="ui black labels">
+{% assign sorted_categories = site.categories | sort %}
+{% for category in sorted_categories %}
+  <a href="/category/{{category[0] | downcase | replace:' ', '-' }}/" class="ui label" title="Blogs Tagged {{category[0]}}" >{{category[0]}} </a>
+{% endfor %}
+</div>
+
+
+<h3>Tags</h3>
+<div class="ui black labels">
+{% assign sorted_tags = site.tags | sort %}
+{% for tag in sorted_tags %}
+  <a href="/tag/{{tag[0] | downcase | replace:' ', '-' }}/" class="ui label" title="Blogs Tagged {{tag[0]}}" >{{tag[0]}} </a>
+{% endfor %}
+</div>

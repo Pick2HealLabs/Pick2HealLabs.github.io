@@ -1,0 +1,30 @@
+{% assign author = site.data.authors[page.author] %}
+{% if author %}
+<div class="ui items author white">
+  <div class="item">
+    <div class="content">
+      <a class="header" href="{{ author.web }}" rel="author">{{ author.name }}</a>
+      <div class="description">
+        {{ author.bio | truncatewords: 40}}
+      </div>
+      <div class="social">
+        {% if author.linkedin %}
+        <a href="{{author.linkedin}}"><i class="linkedin bordered icon"></i></a>
+        {% endif %}
+        {% if author.github %}
+        <a href="{{author.github}}"><i class="github bordered icon"></i></a>
+        {% endif %}
+        {% if author.twitter %}
+        <a href="https://twitter.com/{{author.twitter}}"><i class="twitter bordered icon"></i></a>
+        {% endif %}
+
+        {% if author.web %}
+        <a href="{{author.web}}"><i class="browser bordered icon"></i></a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endif %}

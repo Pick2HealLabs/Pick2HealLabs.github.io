@@ -1,0 +1,9 @@
+<h3>Recent Posts</h3>
+{% assign blogs = site.posts | where: "layout" , "blog" %}
+<ul>
+{% for post in blogs limit:6 %}
+  <li >
+    <a class="header" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+  </li>
+{% endfor %}
+</ul>

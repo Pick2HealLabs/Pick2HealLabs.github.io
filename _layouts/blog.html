@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<header class="post-header">
+    <h1 class="post-title" id="title">{{ page.title }}</h1>
+</header>
+
+<div class="ui grid stackable">
+    <div class="ui eleven wide column text page-text">
+        {% if page.subtitle %}
+        <h2 class="post-subtitle" itemprop="name headline">
+            {{ page.subtitle }}
+        </h2>
+        {% endif %} {% include author.html %}
+
+        <article>
+            {{ content }}
+        </article>
+    </div>
+    <div class="ui five wide column">
+        <div class="ui hidden divider"></div>
+        {% include blog-tags.html %} {% include recentposts.html %} {% include
+        authorbig.html %}
+    </div>
+</div>

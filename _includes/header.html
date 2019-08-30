@@ -1,0 +1,31 @@
+<header class="site-header">
+    <div class="widescreen computer mobile only">
+        <div class="ui secondary menu">
+            <a href="/" class="item left" title="Home of {{site.title}}">
+                {% include logo.html %}
+            </a>
+
+            <a href="/" class="item right" id="mobmenu"
+                ><i class="content right big icon"></i
+            ></a>
+        </div>
+    </div>
+    <div class="ui secondary pointing menu large screen only">
+        <div class="left menu">
+            <a href="/" title="Home of {{site.title}}">
+                {% include logo.html %}
+            </a>
+        </div>
+        <div class="right menu" id="menu">
+            <a class="item" title="About {{site.title}}" href="/about/pick2heal"
+                >About Us</a
+            >
+
+            <a class="item" href="/blood-tests">Blood Test</a>
+            <a class="item" title="Blog" href="/blogs">Blog</a>
+            <a class="item" title="Contact {{site.title}}" href="/about/contact"
+                >Contact</a
+            >
+        </div>
+    </div>
+</header>
