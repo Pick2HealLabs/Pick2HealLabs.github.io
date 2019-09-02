@@ -14,7 +14,7 @@ baseurl: '/' # the subpath of your site, e.g. /blog
 url: 'https://pick2heal.com' # the base hostname & protocol for your site
 
 address: 'M2, Gayathri, Technopark Campus, Trivandrum, 695581'
-phone: '18002586393'
+phone: '1800-258-6393'
 
 # Build settings
 maRkdown: kramdown
