@@ -229,7 +229,7 @@ blockquote {
 }
 
 .page-default {
-    background: url(/assets/img/shape.png) no-repeat bottom right;
+    background: url(/assets/img/price_bg.png) no-repeat top center;
     .masthead {
         min-height: 400px;
     }
@@ -430,17 +430,6 @@ code {
 .ui.white.header {
     color: #fff;
 }
-.cta-blog {
-    background-color: $body;
-    min-height: 150px;
-    margin: 15px 0;
-    padding: 10px;
-    text-align: center;
-    a.ui.button.big.black.obsa {
-        background: #fff;
-        color: #000;
-    }
-}
 .techs {
     padding: 40px 0;
 }
@@ -470,32 +459,27 @@ code {
         margin-top: 10vh;
     }
     .page-text {
-        a {
+        a:not(.nota) {
             outline: none;
             text-decoration: none;
             padding: 2px 1px 0;
-        }
-
-        a:link {
-            color: #265301;
-            background: #ccc;
-        }
-
-        a:visited {
-            color: #437a16;
-            background: pink;
-        }
-
-        a:focus {
-            border-bottom: 1px solid;
-        }
-
-        a:hover {
-            border-bottom: 1px solid;
-        }
-
-        a:active {
-            color: #cdfeaa;
+            &:link {
+                color: #265301;
+                background: #ccc;
+            }
+            &:visited {
+                color: #437a16;
+                background: pink;
+            }
+            &:focus {
+                border-bottom: 1px solid;
+            }
+            &hover {
+                border-bottom: 1px solid;
+            }
+            &:active {
+                color: #cdfeaa;
+            }
         }
     }
 }
@@ -516,13 +500,16 @@ code {
         }
     }
 }
-abbr[title] {
-    border: 0 none;
-}
 
 @media only screen and (max-width: 767px) {
     .ui.stackable.grid.w > .column:not(.row) {
         margin: -1rem !important;
+    }
+
+    .services {
+        .servicess {
+            background: 0 none !important;
+        }
     }
 }
 
@@ -551,25 +538,6 @@ input[type='text'],
 input:active,
 input:focus {
     border: 0 none !important;
-}
-
-.theicon {
-    -webkit-box-sizing: content-box;
-    box-sizing: content-box;
-    width: 55px;
-    height: 60px;
-    position: relative;
-    margin: 0px 0px 25px;
-    font-size: 18px;
-    -webkit-border-radius: 50% / 14%;
-    border-radius: 50% / 14%;
-    color: white;
-    text-align: center;
-    line-height: 64px;
-    -o-text-overflow: clip;
-    text-overflow: clip;
-    z-index: 1;
-    background: green;
 }
 
 .quote.stripe.segment {
@@ -705,4 +673,7 @@ ul li {
 
 .phonecta {
     font-size: 3rem;
+}
+.call {
+    font-size: 1.5rem;
 }

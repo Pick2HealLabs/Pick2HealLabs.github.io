@@ -1,6 +1,5 @@
 {% assign title = page.title | defaut: site.title %}
 
-
 {% if(page.meta) %}
 {% assign tile = page.meta | prepend:"/assets/img/blog/" | prepend: site.url %}
 {% endif %}
@@ -11,14 +10,6 @@
 {% assign author = site.data.authors[page.author] %}
 {% assign individual_account = site.data.authors[page.author].twitter %}
 {% assign authormeta = author.name | append: ", " | appned: author.email %}
-
-{% if(page.ptype == 'career') %}
-  {% assign tile = page.meta | prepend:"/assets/images/hiring.png" | prepend: site.url %}
-{% endif %}
-
-{% if(page.layout == 'work') %}
-  {% assign tile = page.images[0] | prepend:"/assets/img/work/960/" | prepend: site.url %}
-{% endif %}
 
 <!-- Facebook / Open Graph -->
 <meta property="og:url" content="{{pageurl}}">
