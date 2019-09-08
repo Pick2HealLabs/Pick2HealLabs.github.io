@@ -13,7 +13,7 @@ $bg: #ffffff;
 $body: #292724;
 $bodyoff: #fbfbfd;
 $red: #fc044c;
-
+$black: #1b1c1d;
 $theFont: 'Lora', Georgia, serif;
 
 @mixin fontReflowFix {
@@ -163,6 +163,7 @@ h2 {
         .image {
             border: 0 none !important;
             background: 0 none !important;
+            box-shadow: unset !important;
         }
         .image {
             width: 200px !important;
@@ -582,7 +583,7 @@ ul li {
             margin: 0 0 0 80px;
         }
         .row {
-            margin: 70px 0;
+            margin: 100px 0;
         }
     }
     .ringring {
@@ -623,4 +624,11 @@ ul li {
 }
 .statisti {
     margin: 10vh auto !important;
+}
+.sttic {
+    background-color: $black;
+    padding: 15px 0;
+}
+.ui.text.container {
+  font-family: $theFont;
 }
