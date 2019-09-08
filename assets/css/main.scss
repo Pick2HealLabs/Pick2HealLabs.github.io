@@ -302,10 +302,23 @@ i:focus {
     [class*='or lower hidden'] {
         display: none !important;
     }
-
+    .ui.large.header {
+        font-size: 1.7rem !important;
+    }
     .site-header,
     .masthead {
         padding: 1.5rem 0;
+        .button {
+            width: 300px !important;
+            margin-bottom: 5px !important;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+    .ui.videosec {
+        width: 100% !important;
+        margin: 0 !important;
     }
 
     .ui.horizontal.divider {
@@ -315,6 +328,27 @@ i:focus {
     .secondary {
         .item {
             padding: 0 !important;
+        }
+    }
+
+    .ui.stackable.grid.w .column {
+        margin: 1.3rem -1rem -1rem -1rem !important;
+        &.imag {
+            display: none !important;
+            visibility: 0 !important;
+        }
+    }
+
+    .services {
+        padding: 5vh 0 !important;
+        .servicess {
+            background: 0 none !important;
+        }
+        img.image {
+            display: none !important;
+        }
+        .header {
+            font-size: 1.3rem !important;
         }
     }
 }
@@ -433,19 +467,6 @@ i:focus {
         }
     }
 }
-
-@media only screen and (max-width: 767px) {
-    .ui.stackable.grid.w > .column:not(.row) {
-        margin: -1rem !important;
-    }
-
-    .services {
-        .servicess {
-            background: 0 none !important;
-        }
-    }
-}
-
 input:not([type]),
 input[type='date'],
 input[type='datetime-local'],
