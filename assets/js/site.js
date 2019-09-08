@@ -35,6 +35,10 @@ jQuery(document).ready(function($) {
     })
 
     $('.url.example .ui.embed').embed()
+
+    $('.card .image').dimmer({
+        on: 'hover'
+    })
 })
 var commentSlider = {
     config: {
