@@ -7,7 +7,7 @@
 
 $padd: 3.5rem;
 $padsmall: 1.5rem;
-$fontsize: 1.5rem;
+$fontsize: 1.35rem;
 
 $bg: #ffffff;
 $body: #292724;
@@ -121,7 +121,7 @@ h2 {
 
     p {
         text-justify: inter-character;
-        line-height: 1.75em !important;
+        line-height: 1.5em !important;
     }
 }
 
@@ -499,7 +499,6 @@ input:focus {
     transform: translateY(-50%);
     top: 50%;
     margin: 0 auto;
-    width: 75%;
     overflow: hidden;
     p {
         position: absolute;
@@ -545,7 +544,6 @@ input:focus {
 ul {
     margin: 0;
     padding: 0;
-    text-align: center;
 }
 
 ul li {
