@@ -6,28 +6,25 @@
 @charset "utf-8";
 
 $padd: 3.5rem;
-$paddmed: 2.5rem;
 $padsmall: 1.5rem;
 $fontsize: 1.5rem;
 
 $bg: #ffffff;
 $body: #292724;
 $bodyoff: #fbfbfd;
-$green: #2e8b38;
-$offw: $bodyoff;
-$white: #fff;
-$black: #fc044c;
-$a-color: hsl(227, 55%, 50%);
+$red: #fc044c;
 
-$theFont: 'Lora', serif;
+$theFont: 'Lora', Georgia, serif;
 
-@mixin grayScale($pos) {
-    -webkit-filter: grayscale($pos);
-    -moz-filter: grayscale($pos);
-    -ms-filter: grayscale($pos);
-    -o-filter: grayscale($pos);
-    filter: grayscale($pos);
+@mixin fontReflowFix {
+    font-size: 16px;
+    line-height: 1.6;
+    visibility: visible;
+    letter-spacing: 0.5px;
+    word-spacing: 0.05px;
+    font-weight: 300;
 }
+
 .ui.button,
 h1,
 h2,
@@ -47,6 +44,7 @@ body {
     color: $body;
     line-height: 2rem !important;
     font-family: $theFont;
+    @include fontReflowFix;
 }
 
 h1,
@@ -60,29 +58,6 @@ h5 {
 h2 {
     font-weight: bold;
     font-family: $theFont;
-}
-
-body.night {
-    background-color: #fc044c;
-
-    p,
-    div,
-    span,
-    a {
-        color: $offw !important;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4 {
-        color: #e8e8e8 !important;
-    }
-
-    a.button.black {
-        background-color: $white !important;
-        color: #fc044c !important;
-    }
 }
 
 h1 {
@@ -197,7 +172,7 @@ h2 {
     }
 }
 .ui.button {
-    font-weight: 300 !important;
+    font-weight: 400 !important;
 }
 a:not(.button) {
     color: #666 !important;
@@ -211,14 +186,6 @@ a:not(.button) {
     .alightbox {
         display: block;
     }
-}
-
-blockquote {
-    padding: 10px 20px;
-    margin: 0 0 20px 20px;
-    font-size: 17.5px;
-    border-left: 3px solid $offw;
-    font-style: italic;
 }
 
 .page-work {
@@ -260,6 +227,11 @@ blockquote {
 .path-front {
     .ui.header > .icon {
         vertical-align: top !important;
+    }
+    .techs {
+        .content {
+            font-weight: normal !important;
+        }
     }
 }
 
@@ -315,15 +287,6 @@ i:focus {
 .ohidden {
     display: none;
     visibility: hidden;
-}
-
-pre.highlight,
-pre {
-    background: $bodyoff;
-    padding: 1rem;
-    color: #fff;
-    border-radius: 4px;
-    overflow-x: scroll;
 }
 
 #menu.right.menu {
@@ -414,12 +377,6 @@ pre {
         text-decoration: none !important;
     }
 }
-code {
-    background: $bodyoff;
-    padding: 1px 2px;
-    border-radius: 2px;
-    color: $white;
-}
 .catsntags {
     .ui.black.labels {
         a.label {
@@ -504,11 +461,11 @@ input[type='url'],
 input[type='text'],
 .dropdown.selection,
 .ui.input > input {
-    border: 3px solid $black !important;
+    border: 3px solid $red !important;
 }
 .dropdown.selection,
 .button.primary {
-    background: $black !important;
+    background: $red !important;
     color: #fff !important;
 }
 input:active,
