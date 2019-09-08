@@ -10,7 +10,7 @@ title: Pick2Heal Labs
 email: contact@pick2heal.com
 slogan: Blood tests at your doorstep
 masthead: Care for your family.
-baseurl: '/' # the subpath of your site, e.g. /blog
+baseurl: '' # the subpath of your site, e.g. /blog
 url: 'https://pick2heal.com' # the base hostname & protocol for your site
 
 address: 'M2, Gayathri, Technopark Campus, Trivandrum, 695581'
@@ -36,21 +36,12 @@ exclude:
         'Gemfile',
         'Gemfile.lock',
         '.gulp-scss-cache',
-        'assets/css/lightbox.min.css',
-        'assets/css/semantic.css',
-        'assets/css/semantic.min.css',
-        'assets/js/isotope.pkgd.js',
-        'assets/js/jquery.min.js',
-        'assets/js/lightbox.min.js',
-        'assets/js/lightbox.min.map',
-        'assets/js/semantic.js',
     ]
 
 encoding: 'utf-8'
 markdown_ext: 'markdown,mkdown,mkdn,mkd,md'
 
 plugins:
-    - jekyll-gist
     - jekyll-paginate
     - jekyll-sitemap
 
@@ -69,14 +60,13 @@ compress_html:
     endings: []
     ignore:
         envs: [local]
-    blanklines: true
+    blanklines: false
+    startings: [html, head, body]
     profile: false
-    startings: []
 
 sass:
     sass_dir: assets/css
     style: compressed
 
 whitelist:
-    - jekyll-gist
     - jekyll-paginate
