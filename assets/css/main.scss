@@ -14,15 +14,12 @@ $body: #292724;
 $bodyoff: #fbfbfd;
 $red: #cb2027;
 $black: #1b1c1d;
-$theFont: 'Lora', Georgia, serif;
+$theFont: 'Lato', sans-serif;
 
 @mixin fontReflowFix {
     font-size: 16px;
     line-height: 1.6;
     visibility: visible;
-    letter-spacing: 0.5px;
-    word-spacing: 0.05px;
-    font-weight: 300;
 }
 
 .ui.button,
@@ -52,7 +49,6 @@ h3,
 h4,
 h5 {
     font-family: $theFont;
-    word-spacing: -0.125em;
 }
 
 h2 {
@@ -91,7 +87,7 @@ h2 {
 
     h1 {
         margin-bottom: 20px;
-        font-weight: 700;
+        font-weight: 900;
     }
 
     h2 {
@@ -190,7 +186,7 @@ a:not(.button) {
 }
 
 .page-default {
-    background: url(/assets/img/price_bg.png) no-repeat top center;
+    background: url(/assets/img/price_bg.png) no-repeat top left;
     .masthead {
         min-height: 400px;
     }
@@ -551,13 +547,14 @@ ul li {
     list-style: none;
 }
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     border-radius: 100px;
     background: #7f8c8d;
     display: inline-block;
     text-lign: center;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 .active {
